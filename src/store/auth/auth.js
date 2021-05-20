@@ -1,4 +1,4 @@
-import {Auth, loadingContainer} from 'aws-amplify';
+import {Auth} from 'aws-amplify';
 
 export const auth = {
     namespace: true,
@@ -13,7 +13,7 @@ export const auth = {
             commit("setUser", null);
             return await Auth. signOut();
         },
-        async loadingContainer({commit, dispatch}, {username, password}) {
+        async loadingContainer({commit}, {username, password}) {
             try {
                 await Auth.signIn({
                     username,
