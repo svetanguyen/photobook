@@ -11,6 +11,23 @@ const routes = [
     component: Home
   },
   {
+    path: '/signup',
+    name: 'SignUpPage',
+    component: Signup
+  },
+  {
+    path: '/album/:id',
+    name: 'AlbumDetailPage',
+    component: AlbumDetailPage,
+    meta: {requiresAuth: true}
+  },
+  {
+    path: '/albums',
+    name: 'AlbumsPage',
+    component: 'AlbumsPage',
+    meta: {requiresAuth: true}
+  },
+  {
     path: '/about',
     name: 'About',
     // route level code-splitting
