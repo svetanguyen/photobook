@@ -13,7 +13,7 @@ export const auth = {
             commit("setUser", null);
             return await Auth. signOut();
         },
-        async loadingContainer({commit}, {username, password}) {
+        async login({commit}, {username, password}) {
             try {
                 await Auth.signIn({
                     username,
