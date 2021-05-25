@@ -84,7 +84,7 @@ export default {
                     username: this.username,
                     code: this.code
                 });
-                await this.$store.dispatch('authlogin', {
+                await this.$store.dispatch('auth/login', {
                     username: this.username,
                     password: this.password
                 });
